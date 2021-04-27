@@ -2,10 +2,18 @@
   <div class="home">
     <h1>{{ message }}</h1>
     
-     <h2>{{ blurb.location }}</h2> 
-     <img v-bind:src="blurb.image_url" />
-     <p>{{ blurb.fact }}</p>
+      
      
+     
+     	<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in" id="first">
+						<div class="content">
+							<h2>{{ blurb.location }}</h2>
+							<p>{{ blurb.fact }}</p>
+						</div>
+						<div class="image">
+							<img v-bind:src="blurb.image_url" />
+						</div>
+			 </section>
   </div>
 </template>
 
