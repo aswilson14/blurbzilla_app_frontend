@@ -2,7 +2,7 @@
 
   <div id="wrapper">
    <router-view/>
-   <Form />
+  
         
 				<!-- Seven -->
 					

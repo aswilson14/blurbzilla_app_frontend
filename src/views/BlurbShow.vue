@@ -10,6 +10,24 @@
 							<img v-bind:src="blurb.image_url" />
 						</div>
 			 </section>
+       <form v-on:submit.prevent="createBlurb()">
+								<div class="fields">
+                    
+									<div class="field half">
+										<label for="name">Location</label>
+										<input type="text" name="name" id="name" value="" v-model="location"/>
+									</div>
+									
+									<div class="field">
+										<label for="message">New Blurb</label>
+										<textarea name="message" id="message" rows="6" v-model="newBlurb"></textarea>
+									</div>
+								</div>
+								<ul class="actions special">
+									<button>Submit Blurb</button>
+                                    
+								</ul>
+							</form>
   </div>
 </template>
 
@@ -23,6 +41,8 @@ export default {
   data: function () {
     return {
       blurb: {},
+      newBlurb: "",
+      location: "",
       message: "BlurbZilla",
     };
   },
@@ -34,6 +54,19 @@ export default {
       axios.get("api/blurbs").then((response) => {
         console.log("blurbs index", response);
         this.blurb = response.data;
+      });
+    },
+
+    createBlurb: function () {
+      console.log("creating blurb...");
+      var params = {
+        location: this.location,
+        blurb: this.newBlurb,
+      };
+      axios.post("/api/blurbs", params).then((response) => {
+        console.log("blurbs create", response);
+        this.location = "";
+        this.newBlurb = "";
       });
     },
   },
