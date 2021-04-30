@@ -10,24 +10,32 @@
 							<img v-bind:src="blurb.image_url" />
 						</div>
 			 </section>
-       <form v-on:submit.prevent="createBlurb()">
+       <div>
+       <button v-on:click="boop">BOOP</button>
+       </div>
+       <section class="wrapper style1 align-center">
+						<div class="inner medium">
+							<h2>New Blurb Form</h2>
+							<form v-on:submit.prevent="createBlurb()">
 								<div class="fields">
-                    
-									<div class="field half">
-										<label for="name">Location</label>
-										<input type="text" name="name" id="name" value="" v-model="location"/>
+									<div class="field">
+										<label for="location"
+						       >Location</label>
+										<input type="text" name="location" id="location" value="" v-model="location" />
 									</div>
 									
 									<div class="field">
-										<label for="message">New Blurb</label>
-										<textarea name="message" id="message" rows="6" v-model="newBlurb"></textarea>
+										<label for="Blurb Text">New Blurb</label>
+										<textarea name="New Blurb" id="blurb-text" rows="4" v-model="newBlurb"></textarea>
 									</div>
 								</div>
 								<ul class="actions special">
-									<button>Submit Blurb</button>
-                                    
+									<li><input type="submit" name="submit" id="submit" value="Submit Blurb" /></li>
 								</ul>
 							</form>
+
+						</div>
+					</section>
   </div>
 </template>
 
@@ -55,6 +63,9 @@ export default {
         console.log("blurbs index", response);
         this.blurb = response.data;
       });
+    },
+    boop: function () {
+      location.reload();
     },
 
     createBlurb: function () {
