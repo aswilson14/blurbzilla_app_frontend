@@ -1,16 +1,33 @@
 <template>
   <div class="home">
     <h1>{{ message }}</h1>
-       <section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in" id="first">
+       <section class="spotlight style1 orient-right content-align-center image-position-center" id="first">
 						<div class="content">
-							<h2>{{ blurb.location }}</h2>
-							<p>{{ blurb.fact }}</p>
+							<br>
+							<br>
+							<br>
+							<br>
+							<br>
+							<br>
+							<br>
+							<br>
+							<br>
+							<br>
+							<br>
+							<br>
+							<br>
+							<br>
+							<br>
 						</div>
-						<div class="image">
+						<div id="second" class="image">
 							<img v-bind:src="blurb.image_url" />
 						</div>
 			 </section>
-       <div>
+       <div id="blurbs">
+       <h2>{{ blurb.location }}</h2>
+							<p>{{ blurb.fact }}</p>
+              </div>
+       <div id="boop" class="Boopbutton"> 
        <button v-on:click="boop">BOOP</button>
        </div>
        <section class="wrapper style1 align-center">
@@ -30,7 +47,8 @@
 									</div>
 								</div>
 								<ul class="actions special">
-									<li><input type="submit" name="submit" id="submit" value="Submit Blurb" /></li>
+									<li><input type="submit" name="submit" id="submit" value="Submit Blurb" />
+                  </li>
 								</ul>
 							</form>
 

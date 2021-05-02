@@ -41,4 +41,44 @@ export default {
 </script>
 
 <style>
+#wrapper {
+  background-image: url("https://i.pinimg.com/originals/ef/19/29/ef1929f8e11b1408ee388e51f09e8d88.jpg");
+}
+#second {
+  border: 5px solid rgb(197, 190, 190);
+  border-radius: 5px;
+  padding: 5px;
+  display: block;
+  margin-left: 25%;
+  margin-right: 50%;
+  width: 50%;
+  height: relative;
+}
+
+#nav {
+  float: center;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  border-bottom: 3px solid transparent;
+}
+
+#blurbs {
+  margin: auto;
+  width: 75%;
+  border: 1px solid rgb(8, 44, 8);
+  padding: 10px;
+}
+
+#boop {
+  margin: 0;
+  position: absolute;
+  top: 132%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
 </style>
