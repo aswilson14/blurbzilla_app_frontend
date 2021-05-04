@@ -58,7 +58,7 @@ export default {
 #nav {
   float: center;
   display: block;
-  color: #f2f2f2;
+  color: #968c8c;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -68,16 +68,16 @@ export default {
 
 #blurbs {
   margin: auto;
-  width: 75%;
-  border: 1px solid rgb(8, 44, 8);
-  padding: 10px;
+  width: 65%;
+  border: 2px solid rgb(8, 44, 8);
+  padding: 15px;
 }
 
 #boop {
   margin: 0;
   position: absolute;
-  top: 132%;
-  left: 50%;
+  top: 25%;
+  left: 6%;
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }

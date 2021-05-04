@@ -22,6 +22,7 @@
 						<div id="second" class="image">
 							<img v-bind:src="blurb.image_url" />
 						</div>
+            
 			 </section>
        <div id="blurbs">
        <h2>{{ blurb.location }}</h2>
